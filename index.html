@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Raj Resorts | Lambasingi</title>
+    <meta name="description"
+        content="Experience the Kashmir of Andhra. Misty mornings, strawberry fields, and cozy bonfires.">
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Replacing Lucide) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" onclick="setPage('home')">Ram Raj Resorts<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="setPage('rooms')">Rooms</a></li>
+                <li><a href="#" onclick="setPage('guide')">Local Guide</a></li>
+                <li><a href="#" onclick="setPage('contact')">Contact</a></li>
+                <li><a href="https://www.goibibo.com/hotels/hotel-details/?checkin=20251204&checkout=20251205&roomString=1-2-0&searchText=RAMARAJU%20RESORTS&locusId=RGVIS&locusType=region&cityCode=CTCHINTA&cc=IN&_uCurrency=INR&vcid=703500747699395743&giHotelId=941371878921423055&locationData=area%7CLambasingi$ARLAMBASI$17.818447$82.492599%7CL&mmtId=202212220920169579&sType=landmark"
+                        target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Book Online</a>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" onclick="setPage('rooms')">Rooms</a>
+            <a href="#" onclick="setPage('guide')">Local Guide</a>
+            <a href="#" onclick="setPage('contact')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <main id="app-content">
+        <!-- Content will be injected here by script.js -->
+    </main>
+
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-text">Ask AI Guide</span>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-sparkles text-yellow"></i>
+                <div>
+                    <h3>Resort Guide AI</h3>
+                    <span>Powered by Gemini</span>
+                </div>
+            </div>
+            <button onclick="toggleChat()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message model">
+                <div class="msg-bubble">Namaskaram! 🙏 Welcome to Ram Raj Resorts. I can help you with room details,
+                    weather updates, or booking info!</div>
+            </div>
+        </div>
+        <form class="chat-input" onsubmit="handleChatSubmit(event)">
+            <input type="text" id="userQuery" placeholder="Ask about rooms..." autocomplete="off">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="modalContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Ram Raj Resorts<span class="dot">.</span></h3>
+                <p>The coolest place in Andhra Pradesh.</p>
+                <p class="copyright">Copyright © 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
